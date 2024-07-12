@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>QBISM - Sorting Visualizer</title>
+  </head>
+  <body>
+    <div id="main">
+      <nav>
+        <a class="title" href="index.html">QBISM - Sorting Visualizer</a>
+        <div class="menu">
+          <select name="algo" id="algo">
+            <option value="0">Select Algorithm</option>
+            <optgroup label="Comparison based Algorithms">
+              <option value="1">Bubble Sort</option>
+              <option value="2">Insertion Sort</option>
+              <option value="3">Selection Sort</option>
+            </optgroup>
+            <optgroup label="Divide & Conquer Algorithms">
+              <option value="4">Quick Sort</option>
+              <option value="5">Merge Sort</option>
+            </optgroup>
+          </select>
+          <input
+            type="number"
+            id="num"
+            value="10"
+            placeholder="No. of Elements"
+            inputmode="numeric"
+          />
+        </div>
+      </nav>
+      <div class="controls">
+        <p class="custom-array">
+          <button onclick="displayModal()">Enter your own array here!!</button>
+        </p>
+        <button onclick="generateElements()">Generate</button>
+        <button id="sortBtn" onclick="sortElements()">SORT</button>
+      </div>
+      <p class="swapCount">Number of swaps: <span id="cnt">0</span></p>
+      <div class="array"></div>
+    </div>
+    <div class="modal">
+      <div class="close-modal" onclick="closeModal()">&#10060</div>
+      <h2>Enter your array</h2>
+      <p>eg. : 43, 164, 292, 93, 362, 80</p>
+      <div>
+        <input type="text" id="custom-arr" inputmode="numeric" />
+      </div>
+      <p style="color: rgb(42, 58, 74); font-size: 12px">
+        * Make sure you enter array in given format <br />
+        (Comma separated values) <br />(Range : 1 to 400)
+      </p>
+      <button onclick="addCustomElements()">Done!</button>
+    </div>
+    <footer>
+      <a class="footerText" href="">Github repository</a
+      >
+    </footer>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bubbleSort.js"></script>
+    <script src="./scripts/insertionSort.js"></script>
+    <script src="./scripts/selectionSort.js"></script>
+    <script src="./scripts/quickSort.js"></script>
+    <script src="./scripts/mergeSort.js"></script>
+  </body>
+</html>
